@@ -20,7 +20,7 @@ Add this in your app level gradle:
 
 ```
 
-    implementation 'com.github.Keeprawteach:Text-Animation:1.0.0'
+    implementation 'com.github.Keeprawteach:Imeja-Dialog:1.0.0'
 ```
 
 ## Initialization
