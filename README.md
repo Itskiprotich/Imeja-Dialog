@@ -29,8 +29,7 @@ Initialize in the Activity file:
 
 ```
 ImejaDialog dialog
-
-textWriter = findViewById(R.id.textWriter);
+ 
 ```
 
 ## Customization
