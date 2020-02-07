@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Imeja Dialog</string>
+    <string name="standard_title">Loading</string>
+    <string name="standard_message">Please wait..</string>
+</resources>

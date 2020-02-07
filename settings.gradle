@@ -1,0 +1,2 @@
+include ':app', ':imejadialog'
+rootProject.name='Imeja Dialog'
