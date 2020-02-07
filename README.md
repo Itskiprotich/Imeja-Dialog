@@ -2,7 +2,7 @@
 
 :fire: Display a progress dialog with customized options :fire:
 
-![gif](https://media.giphy.com/media/VF5ui7uLug7jkvS8gO/giphy.gif)
+![gif](https://media.giphy.com/media/H5GZlMJcqQtnJMZn5i/giphy.gif)
 
 ## Add dependency
 
