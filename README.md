@@ -1,6 +1,6 @@
-# Text Animation
+# Imeja Dialog
 
-:fire: Animate your text like never before :fire:
+:fire: Display a progress dialog with customized options :fire:
 
 ![gif](https://media.giphy.com/media/VF5ui7uLug7jkvS8gO/giphy.gif)
 
@@ -24,47 +24,42 @@ Add this in your app level gradle:
 ```
 
 ## Initialization
-
-Add TextWriter in your xml file:
-
-```         
-    <com.kiprotich.japheth.TextAnim
-        android:id="@+id/textWriter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-```
-
+ 
 Initialize in the Activity file:
 
 ```
-TextWriter textWriter;
+ImejaDialog dialog
 
 textWriter = findViewById(R.id.textWriter);
 ```
 
 ## Customization
 
-Customize according to your need (**as of now it supports only uppercase letters and whitespace** :broken_heart:):
+Customize according to your need.
 
 ```
-textWriter
-         .setWidth(12)
-         .setDelay(30)
-         .setColor(Color.RED)
-         .setConfig(TextWriter.Configuration.INTERMEDIATE)
-         .setSizeFactor(30f) 
-         .setLetterSpacing(25f)
-         .setText("KIPROTICH JAPHETH")
-         .setListener(new TextWriter.Listener() {
-          	@Override
-          	public void WritingFinished() {
 
-			//do stuff after animation is finished
-                }
-          })
-         .startAnimation();
+        dialog = new ImejaDialog.Builder(ImejaDialogActivity.this)
+                .setOnCancelListener(new DialogInterface.OnCancelListener() {
+                    @Override
+                    public void onCancel(DialogInterface dialog) {
+
+                    }
+                })
+
+                .setSpinnerColorRes(R.color.colorGreen)
+                .setMessageColorRes(R.color.colorAccent)
+                .setTitle(R.string.standard_title)
+                .setTitleColorRes(R.color.colorPrimary)
+                .setMessageContent(getString(R.string.standard_message))
+                .setCancelable(true)
+                .setMessageContentGravity(Gravity.END)
+                .build();
 ```
-***Because of different screen resolutions of different devices, try to avoid using constant values for width, sizeFactor and letterSpacing. Instead use some fraction of the screenWidth for consistent result across multiple devices.***
+***Show the dialog on any click action***
+```
+dialog.show();
+```
 
 ## Contributing :heart_eyes:
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
